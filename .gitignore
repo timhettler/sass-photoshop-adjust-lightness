@@ -9,6 +9,7 @@
 *.vi
 *~
 *.sass-cache
+*.gem
 
 # Package folders
 node_modules
