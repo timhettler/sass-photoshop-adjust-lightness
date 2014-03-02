@@ -1,18 +1,23 @@
-@function psd-get-lightness-adjustment($color, $adjustment) {
-    @if ($adjustment > 0) {
-        @return (1-$lightness) * ($adjustment * .5);
-    } @else {
-        @return (0-$lightness) * (abs($adjustment) * .5);
-    }
-}
-
 @function psd-adjust-lightness($color, $adjustment) {
     $adjustment: $adjustment/100; // Convert photoshop value to decimal
     $lightness: percentage-to-decimal(lightness($color)); // Get lightness portion of color and convert to decimal
-    $change-amount: psd-get-lightness-adjustment($color, $adjustment); // The amount our color will change by
-    $new-color: ($lightness + change-amount) * 100%; // Apply change amount to original color and convert to percentage
+    $change-amount: psd-get-lightness-adjustment($lightness, $adjustment); // The amount our color will change by
+    $new-lightness: ($lightness + $change-amount) * 100%; // Apply change amount to original lightness and convert to percentage
 
-    @return change-color($color, $lightness: $new-color); // Return new color
+    @return change-color($color, $lightness: $new-lightness); // Return new color
+}
+
+@function psd-get-lightness-adjustment($lightness, $adjustment) {
+    $lightness: percentage-to-decimal($lightness);
+    $change-amount: 0;
+
+    @if ($adjustment > 0) {
+        $change-amount: (1-$lightness) * ($adjustment * .5);
+    } @else {
+        $change-amount: (0-$lightness) * (abs($adjustment) * .5);
+    }
+
+    @return $change-amount
 }
 
 // Convert percentage units to decimal units

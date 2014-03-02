@@ -1,4 +1,4 @@
-require './lib/sass-photoshop-lightness-adjust'
+require './lib/sass-photoshop-adjust-lightness'
 
 Gem::Specification.new do |s|
   # Release Specific Information
@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.date = "2014-03-02"
 
   # Gem Details
-  s.name = "sass-photoshop-lightness-adjust"
+  s.name = "sass-photoshop-adjust-lightness"
   s.description = "A Sass function that replicates the lightness slider in the Photoshop Hue/Saturation adjustment panel"
   s.summary = "A Sass function that replicates the lightness slider in the Photoshop Hue/Saturation adjustment panel"
   s.authors = ["Tim Hettler"]
