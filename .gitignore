@@ -37,3 +37,4 @@ publish
 .idea
 build
 bin
+lib
