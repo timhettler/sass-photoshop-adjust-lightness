@@ -1,4 +1,4 @@
-@function psd-adjust-lightness($color, $adjustment) {
+@function photoshop-adjust-lightness($color, $adjustment) {
     $adjustment: $adjustment/100; // Convert photoshop value to decimal
     $lightness: percentage-to-decimal(lightness($color)); // Get lightness portion of color and convert to decimal
     $change-amount: psd-get-lightness-adjustment($lightness, $adjustment); // The amount our color will change by
@@ -7,7 +7,7 @@
     @return change-color($color, $lightness: $new-lightness); // Return new color
 }
 
-@function psd-get-lightness-adjustment($lightness, $adjustment) {
+@function photoshop-get-lightness-adjustment($lightness, $adjustment) {
     $lightness: percentage-to-decimal($lightness);
     $change-amount: 0;
 
