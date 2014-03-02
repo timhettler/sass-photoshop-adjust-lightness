@@ -1,0 +1,23 @@
+{
+  "name": "sass-photoshop-adjust-lightness",
+  "version": "0.0.1",
+  "homepage": "https://github.com/timhettler/sass-photoshop-adjust-lightness",
+  "authors": [
+    "timhettler <me+github@timhettler.com>"
+  ],
+  "description": "A Sass function that replicates the lightness slider in the Photoshop Hue/Saturation adjustment panel",
+  "main": "stylesheets/_photoshop-adjust-lightness.scss",
+  "keywords": [
+    "Sass",
+    "Photoshop",
+    "Color"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "sass-photoshop-adjust-lightness",
+  "description": "A Sass function that replicates the lightness slider in the Photoshop Hue/Saturation adjustment panel",
+  "tags": [
+    "Sass",
+    "Photoshop",
+    "Color"
+  ],
+}
